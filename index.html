@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia Muro | Tu farmacia de confianza en Valladolid</title>
+    <meta name="description" content="Farmacia Muro en Valladolid (Calle Muro, 8). Lda. Marta Araujo Valle. Atención personalizada, dermocosmética y salud. Horario ininterrumpido. Contáctanos por WhatsApp o teléfono.">
+    
+    <meta property="og:title" content="Farmacia Muro | Tu farmacia de confianza en Valladolid">
+    <meta property="og:description" content="Atención farmacéutica personalizada, profesionalidad y cercanía en el centro de Valladolid.">
+    <meta property="og:image" content="Gemini_Generated_Image_kd5widkd5widkd5w.jpg">
+    <meta property="og:type" content="local.business">
+    <meta property="og:locale" content="es_ES">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Pharmacy",
+      "name": "Farmacia Muro",
+      "image": "Gemini_Generated_Image_kd5widkd5widkd5w.jpg",
+      "@id": "https://www.farmaciamuro.com",
+      "url": "https://www.farmaciamuro.com",
+      "telephone": "+34 983 30 89 02",
+      "email": "farmacia@farmaciamuro.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Muro, 8, bajo dcha",
+        "addressLocality": "Valladolid",
+        "postalCode": "47004",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.6520,
+        "longitude": -4.7245
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:30",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "22:00"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            /* Brand Colors based on the logo & medical aesthetic */
+            --primary-green: #086146; /* Deep pharmacy green from logo text */
+            --secondary-green: #7CB342; /* Light green from logo cross */
+            --accent-purple: #BA68C8; /* Purple from logo cross */
+            --soft-blue: #E3F2FD;
+            --bg-light: #F8FAF9;
+            --text-dark: #2C3E38;
+            --text-gray: #546E7A;
+            --white: #FFFFFF;
+            --shadow-sm: 0 2px 8px rgba(8, 97, 70, 0.08);
+            --shadow-md: 0 4px 16px rgba(8, 97, 70, 0.12);
+            --shadow-lg: 0 8px 24px rgba(8, 97, 70, 0.16);
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-gray);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Nunito', sans-serif;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #064b36;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: var(--white);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1EBE5D;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-green);
+            color: var(--white);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 120px; /* Adjusted for readability */
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .header-ctas {
+            display: flex;
+            gap: 15px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, var(--soft-blue) 100%);
+            padding: 60px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero-content h1 span {
+            color: var(--primary-green);
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            color: var(--text-gray);
+        }
+
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .trust-strip {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .trust-strip div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trust-strip i {
+            color: var(--secondary-green);
+        }
+
+        .hero-info-card {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border-top: 5px solid var(--primary-green);
+        }
+
+        .hero-info-card h3 {
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .info-list i {
+            font-size: 1.2rem;
+            color: var(--accent-purple);
+            margin-top: 4px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border: 1px solid #C8E6C9;
+        }
+
+        /* Sobre Nosotros */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .trust-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .trust-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
+        }
+
+        .trust-card i {
+            font-size: 2.5rem;
+            color: var(--secondary-green);
+            margin-bottom: 20px;
+        }
+
+        .trust-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* Servicios */
+        .services-section {
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            border: 1px solid #E2E8F0;
+            padding: 30px;
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-green);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--soft-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .service-link {
+            color: var(--primary-green);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.95rem;
+        }
+        
+        .service-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Galería Slider */
+        .gallery-section {
+            background-color: var(--bg-light);
+            overflow: hidden;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 500px;
+            background-color: #E2E8F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Placeholder styles for initial load before real photos are added */
+        .slide-placeholder {
+            text-align: center;
+            color: var(--text-gray);
+        }
+        .slide-placeholder i {
+            font-size: 4rem;
+            color: #CBD5E1;
+            margin-bottom: 10px;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            color: var(--primary-green);
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .slider-btn:hover {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .slider-btn.prev { left: 20px; }
+        .slider-btn.next { right: 20px; }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: #CBD5E1;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .dot.active {
+            background-color: var(--primary-green);
+            transform: scale(1.2);
+        }
+
+        /* Informative Categories */
+        .categories-section {
+            background-color: var(--white);
+        }
+        
+        .category-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .category-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .category-content {
+            flex: 1;
+        }
+
+        .category-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary-green);
+        }
+
+        .category-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .category-image {
+            flex: 1;
+            background-color: var(--soft-blue);
+            height: 350px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 4rem;
+            opacity: 0.8;
+        }
+
+        /* Local SEO Text */
+        .seo-section {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 60px 0;
+        }
+
+        .seo-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .seo-content h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+            font-weight: 700;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary-green);
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-gray);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form-box {
+            background-color: var(--bg-light);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            border: 1px solid #E2E8F0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #CBD5E1;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(8, 97, 70, 0.1);
+        }
+
+        textarea.form-control {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .form-success {
+            display: none;
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .map-container {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 350px;
+            box-shadow: var(--shadow-sm);
+            scroll-margin-top: 200px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(rgba(8, 97, 70, 0.95), rgba(8, 97, 70, 0.95)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23064b36" width="100" height="100"/><path fill="%23086146" d="M0 0h50v50H0zm50 50h50v50H50z"/></svg>') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .final-cta h2 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            margin: 0 auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-text {
+            color: #94A3B8;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #CBD5E1;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* Floating WhatsApp */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            background-color: #1EBE5D;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-container, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-row, .category-row:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-ctas, .trust-strip {
+                justify-content: center;
+            }
+            
+            .hero-info-card {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .header-ctas {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            /* Mobile Menu Active State */
+            .nav-active {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                display: flex;
+                padding: 20px;
+                box-shadow: var(--shadow-md);
+                gap: 15px;
+                text-align: center;
+            }
+
+            .nav-active.header-ctas {
+                top: calc(100% + 250px);
+                box-shadow: none;
+                padding-top: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .slide {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="imagenes\Logotipo_farmacia.png" alt="Farmacia Muro logo featuring green and purple pharmacy cross symbol with pharmacy name in deep green text, representing healthcare and medical services in Valladolid">
+            </a>
+            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#faq">Preguntas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#mapa">Dónde estamos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-ctas" id="headerCtas">
+                <a href="tel:+34983308902" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Llamar</a>
+                <a href="https://wa.me/34684356590" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Tu salud, nuestra prioridad. <br><span>Tu farmacia en Valladolid.</span></h1>
+                <p>Atención farmacéutica personalizada, profesionalidad y cercanía en el centro de Valladolid de la mano de Lda. Marta Araujo Valle y su equipo.</p>
+                
+                <div class="hero-ctas">
+                    <a href="tel:+34983308902" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Llamar ahora</a>
+                    <a href="https://wa.me/34684356590" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Escribir por WhatsApp</a>
+                </div>
+
+                <div class="trust-strip">
+                    <div><i class="fa-solid fa-check-circle"></i> Atención personalizada</div>
+                    <div><i class="fa-solid fa-check-circle"></i> Cercanía y confianza</div>
+                    <div><i class="fa-solid fa-check-circle"></i> Asesoramiento profesional</div>
+                </div>
+            </div>
+
+            <div class="hero-info-card">
+                <div class="status-badge" id="openStatus"><i class="fa-regular fa-clock"></i> Consultar horario</div>
+                <h3>Estamos aquí para ayudarte</h3>
+                <ul class="info-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Dirección</strong><br>
+                            Calle Muro, 8, bajo dcha<br>
+                            47004 Valladolid
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong>Horario</strong><br>
+                            Lunes a viernes: 9:30 – 22:00<br>
+                            Sábados: 10:00 – 22:00<br>
+                            Domingos: Cerrado
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Contacto rápido</strong><br>
+                            farmacia@farmaciamuro.com
+                        </div>
+                    </li>
+                </ul>
+                <a href="#contacto" class="btn btn-outline" style="width: 100%; margin-top: 10px;">Ver cómo llegar</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="sobre-nosotros">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">¿Por qué confiar en Farmacia Muro?</h2>
+                <p class="section-subtitle">Nos esforzamos cada día para ofrecerte un espacio de salud seguro, claro y humano en el corazón de Valladolid.</p>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <h3>Atención cercana</h3>
+                    <p>Escuchamos tus necesidades para ofrecerte siempre la mejor recomendación con empatía y respeto.</p>
+                </div>
+                <div class="trust-card">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <h3>Profesionalidad</h3>
+                    <p>Un equipo altamente cualificado liderado por la Lda. Marta Araujo Valle, en continua formación.</p>
+                </div>
+                <div class="trust-card">
+                    <i class="fa-solid fa-comments"></i>
+                    <h3>Claridad y consejo</h3>
+                    <p>Te explicamos todo sobre tu medicación y cuidados de forma sencilla y fácil de entender.</p>
+                </div>
+                <div class="trust-card">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h3>Ubicación cómoda</h3>
+                    <p>Ubicados en pleno Valladolid, con un horario amplio e ininterrumpido pensado para tu comodidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding services-section" id="servicios">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Nuestros Servicios Farmacéuticos</h2>
+                <p class="section-subtitle">Ofrecemos una atención integral para cuidar de tu salud y la de tu familia mediante servicios profesionales.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-prescription"></i></div>
+                    <h3>Receta electrónica</h3>
+                    <p>Dispensación segura y control de tu medicación a través de la tarjeta sanitaria. Te ayudamos a organizar tus pautas.</p>
+                    <a href="https://wa.me/34684356590" target="_blank" class="service-link">Consultar dudas por WhatsApp <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Control de tensión</h3>
+                    <p>Medición precisa de la presión arterial y seguimiento personalizado para prevenir y controlar riesgos cardiovasculares.</p>
+                    <a href="tel:+34983308902" class="service-link">Llamar para más información <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-mortar-pestle"></i></div>
+                    <h3>Asesoramiento personalizado</h3>
+                    <p>Resolvemos tus dudas sobre interacciones, posología y el uso correcto de tus medicamentos diarios.</p>
+                    <a href="#contacto" class="service-link">Escribir por correo <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Productos naturales</h3>
+                    <p>Consejo experto en fitoterapia y complementos alimenticios naturales para mejorar tu bienestar de forma preventiva.</p>
+                    <a href="https://wa.me/34684356590" target="_blank" class="service-link">Consultar por WhatsApp <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-paw"></i></div>
+                    <h3>Veterinaria</h3>
+                    <p>Disponemos de medicamentos y productos de cuidado para mantener la salud y el bienestar de tus mascotas.</p>
+                    <a href="tel:+34983308902" class="service-link">Preguntar disponibilidad <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-crutch"></i></div>
+                    <h3>Ortopedia básica</h3>
+                    <p>Asesoramiento en productos de apoyo, inmovilización y ayudas técnicas para mejorar la movilidad y calidad de vida.</p>
+                    <a href="#contacto" class="service-link">Consultarnos <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding gallery-section" id="galeria">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Conoce Farmacia Muro</h2>
+                <p class="section-subtitle">Un espacio diseñado para tu comodidad, donde nuestro equipo te atenderá con la mayor profesionalidad.</p>
+            </div>
+
+            <div class="slider-container">
+                <button class="slider-btn prev" aria-label="Foto anterior" onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <div class="slide">
+                        <div class="slide-placeholder">
+                            <i class="fa-solid fa-store"></i>
+                            <h3>Exterior de la farmacia</h3>
+                            <p>Espacio reservado para foto de la fachada</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-placeholder">
+                            <i class="fa-solid fa-capsules"></i>
+                            <h3>Interior y atención</h3>
+                            <p>Espacio reservado para foto del mostrador</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-placeholder">
+                            <i class="fa-solid fa-pump-medical"></i>
+                            <h3>Zona de dermocosmética</h3>
+                            <p>Espacio reservado para exposición de productos</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next" aria-label="Siguiente foto" onclick="moveSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-dots" id="sliderDots">
+                <div class="dot active" onclick="currentSlide(0)"></div>
+                <div class="dot" onclick="currentSlide(1)"></div>
+                <div class="dot" onclick="currentSlide(2)"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding categories-section">
+        <div class="container">
+            <div class="category-row">
+                <div class="category-content">
+                    <h3>Dermocosmética y Cuidado de la Piel</h3>
+                    <p>Cada piel es única y requiere un cuidado específico. Te ayudamos a establecer una rutina facial y corporal adaptada a tus necesidades, ya sea para hidratación profunda, tratamientos antiedad, acné o pieles atópicas y sensibles.</p>
+                    <p>Nuestro equipo te orientará sobre los mejores ingredientes y rutinas diarias para mantener una piel sana y protegida todo el año.</p>
+                    <br>
+                    <a href="https://wa.me/34684356590" target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> Preguntarnos por WhatsApp</a>
+                </div>
+                <div class="category-image">
+                    <i class="fa-solid fa-spa"></i>
+                </div>
+            </div>
+
+            <div class="category-row">
+                <div class="category-content">
+                    <h3>Bebé y Maternidad</h3>
+                    <p>Acompañamos a las familias en una de las etapas más importantes. Te ofrecemos asesoramiento en todo lo necesario para la higiene del recién nacido, alimentación infantil, cuidados de la piel del bebé y bienestar de la madre durante el embarazo y el postparto.</p>
+                    <p>Resolvemos tus dudas sobre chupetes, biberones, leches de fórmula y cuidados diarios.</p>
+                    <br>
+                    <a href="tel:+34983308902" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Consultar por teléfono</a>
+                </div>
+                <div class="category-image">
+                    <i class="fa-solid fa-baby"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seo-section">
+        <div class="container">
+            <div class="seo-content">
+                <h2>Tu farmacia cerca de ti en Valladolid</h2>
+                <p>En <strong>Farmacia Muro</strong> trabajamos a diario para ser tu espacio de salud de referencia. Situados en la emblemática <strong>Calle Muro de Valladolid</strong>, ofrecemos un servicio integral que va más allá de la dispensación de medicamentos. Si buscas una <strong>farmacia en Valladolid</strong> donde prime el trato humano, el asesoramiento farmacéutico riguroso y la atención personalizada, te invitamos a conocernos. Ya sea que necesites consejo experto en <strong>dermocosmética en Valladolid</strong>, control de tensión o resolver dudas sobre tu medicación, la Lda. Marta Araujo Valle y todo su equipo están a tu entera disposición.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding faq-section" id="faq">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">Resolvemos las dudas más habituales sobre nuestra farmacia y servicios.</p>
+            </div>
+
+            <div class="faq-container">
+                <details>
+                    <summary>¿Puedo hacer una consulta por WhatsApp?</summary>
+                    <div class="faq-answer">
+                        Sí, por supuesto. Puedes escribirnos a nuestro WhatsApp (+34 684 35 65 90) para realizar consultas farmacéuticas, comprobar si disponemos de un artículo o resolver cualquier duda sin compromiso. Te responderemos en nuestro horario de apertura.
+                    </div>
+                </details>
+                <details>
+                    <summary>¿Cuál es vuestro horario de apertura?</summary>
+                    <div class="faq-answer">
+                        Estamos abiertos en horario ininterrumpido de lunes a viernes de 9:30 a 22:00, y los sábados de 10:00 a 22:00. Los domingos permanecemos cerrados salvo que estemos de guardia.
+                    </div>
+                </details>
+                <details>
+                    <summary>¿Dónde estáis ubicados en Valladolid?</summary>
+                    <div class="faq-answer">
+                        Nos encontramos en el centro de Valladolid, concretamente en la Calle Muro, 8, bajo derecha (Código Postal 47004). Es una zona céntrica y de muy fácil acceso.
+                    </div>
+                </details>
+                <details>
+                    <summary>¿Realizáis control de tensión arterial?</summary>
+                    <div class="faq-answer">
+                        Sí, ofrecemos el servicio de toma y control de la presión arterial en nuestra farmacia. Ven a vernos y te ayudaremos a llevar un seguimiento adecuado para el cuidado de tu salud cardiovascular.
+                    </div>
+                </details>
+                <details>
+                    <summary>¿Puedo contactar por correo electrónico?</summary>
+                    <div class="faq-answer">
+                        Sí, puedes escribirnos a farmacia@farmaciamuro.com. Leemos y respondemos todos los correos. Para cuestiones más urgentes, te recomendamos usar el teléfono o WhatsApp.
+                    </div>
+                </details>
+                <details>
+                    <summary>¿Cómo puedo contactar rápidamente con la farmacia?</summary>
+                    <div class="faq-answer">
+                        La forma más rápida es llamarnos por teléfono al 983 30 89 02 durante nuestro horario comercial. Estaremos encantados de atenderte al momento.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding contact-section" id="contacto">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Contacto y Ubicación</h2>
+                <p class="section-subtitle">Elige la forma de contacto que te resulte más cómoda. Estamos aquí para ayudarte.</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-form-box">
+                    <h3 style="margin-bottom: 20px; color: var(--primary-green); font-size: 1.5rem;">Envíanos un mensaje</h3>
+                    <p style="margin-bottom: 25px;">Puedes escribirnos sin compromiso rellenando este formulario. Te responderemos lo antes posible.</p>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" class="form-control" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono (Opcional)</label>
+                            <input type="tel" id="telefono" class="form-control" placeholder="Tu número de teléfono">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" class="form-control" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" class="form-control" required placeholder="¿En qué podemos ayudarte?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensaje <i class="fa-regular fa-paper-plane"></i></button>
+                        
+                        <div class="form-success" id="formSuccess">
+                            <i class="fa-solid fa-circle-check"></i> Hemos recibido tu mensaje. Te responderemos lo antes posible.
+                        </div>
+                    </form>
+                </div>
+
+                <div class="map-and-info">
+                    <div class="hero-info-card" style="margin-bottom: 30px; box-shadow: none; border: 1px solid #E2E8F0; padding: 30px;">
+                        <ul class="info-list" style="margin: 0;">
+                            <li>
+                                <i class="fa-solid fa-phone" style="color: var(--primary-green);"></i>
+                                <div>
+                                    <strong>Teléfono</strong><br>
+                                    <a href="tel:+34983308902">+34 983 30 89 02</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-whatsapp" style="color: var(--primary-green);"></i>
+                                <div>
+                                    <strong>WhatsApp</strong><br>
+                                    <a href="https://wa.me/34684356590" target="_blank">+34 684 35 65 90</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope" style="color: var(--primary-green);"></i>
+                                <div>
+                                    <strong>Email</strong><br>
+                                    <a href="mailto:farmacia@farmaciamuro.com">farmacia@farmaciamuro.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="map-container" id="mapa">
+                        <iframe src="https://www.google.com/maps/place/Farmacia+Muro+(Lda.+Marta+Araujo+Valle)/@41.6467619,-4.7278809,651m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd47134cd89ae79b:0x440f7752616e8764!8m2!3d41.6467619!4d-4.725306!16s%2Fg%2F11z0wdy0c4?entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ubicación Farmacia Muro"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Tu salud, nuestra prioridad</h2>
+            <p>Atención cercana en Valladolid. Si tienes cualquier duda sobre un tratamiento o necesitas asesoramiento, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.</p>
+            <div class="final-cta-buttons">
+                <a href="tel:+34983308902" class="btn" style="background: white; color: var(--primary-green);"><i class="fa-solid fa-phone"></i> Llamar ahora</a>
+                <a href="https://wa.me/34684356590" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="#contacto" class="btn btn-outline" style="border-color: white; color: white;"><i class="fa-solid fa-map-location-dot"></i> Cómo llegar</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h3>FARMACIA MURO</h3>
+            </div>
+            <p class="footer-text">Lda. Marta Araujo Valle<br>Calle Muro, 8, bajo dcha, 47004 Valladolid</p>
+            <div class="footer-links">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Política de Cookies</a>
+            </div>
+            <p class="footer-text" style="font-size: 0.8rem; margin-bottom: 0;">&copy; 2026 Farmacia Muro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/34684356590" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        const headerCtas = document.getElementById('headerCtas');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            headerCtas.classList.toggle('nav-active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-active');
+                headerCtas.classList.remove('nav-active');
+            });
+        });
+
+        // Contact Form Logic (Simulation for Email integration readiness)
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Here you would typically handle the fetch/axios request to your backend
+            // Simulating success:
+            contactForm.reset();
+            formSuccess.style.display = 'block';
+            setTimeout(() => {
+                formSuccess.style.display = 'none';
+            }, 5000);
+        });
+
+        // Slider Logic
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const wrapper = document.getElementById('sliderWrapper');
+
+        function updateSlider() {
+            wrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[slideIndex].classList.add('active');
+        }
+
+        function moveSlide(step) {
+            slideIndex += step;
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            updateSlider();
+        }
+
+        function currentSlide(n) {
+            slideIndex = n;
+            updateSlider();
+        }
+
+        // Logic for "Abierto ahora" badge based on opening hours
+        function checkOpeningStatus() {
+            const statusBadge = document.getElementById('openStatus');
+            const now = new Date();
+            // Convert to Spanish Time (CET/CEST roughly, simplified for client-side)
+            const day = now.getDay(); // 0 is Sunday
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const timeFloat = hours + minutes / 60;
+
+            let isOpen = false;
+
+            if (day >= 1 && day <= 5) { // Mon - Fri (9:30 - 22:00)
+                if (timeFloat >= 9.5 && timeFloat < 22) isOpen = true;
+            } else if (day === 6) { // Sat (10:00 - 22:00)
+                if (timeFloat >= 10 && timeFloat < 22) isOpen = true;
+            }
+
+            if (isOpen) {
+                statusBadge.innerHTML = '<i class="fa-solid fa-door-open"></i> Abierto ahora';
+                statusBadge.style.backgroundColor = '#E8F5E9';
+                statusBadge.style.color = '#2E7D32';
+                statusBadge.style.borderColor = '#C8E6C9';
+            } else {
+                statusBadge.innerHTML = '<i class="fa-solid fa-door-closed"></i> Cerrado ahora';
+                statusBadge.style.backgroundColor = '#FFEBEE';
+                statusBadge.style.color = '#C62828';
+                statusBadge.style.borderColor = '#FFCDD2';
+            }
+        }
+
+        // Run status check
+        checkOpeningStatus();
+        // Update every minute
+        setInterval(checkOpeningStatus, 60000);
+
+    </script>
+</body>
+</html>
