@@ -1182,29 +1182,24 @@
                 <div class="contact-form-box">
                     <h3 style="margin-bottom: 20px; color: var(--primary-green); font-size: 1.5rem;">Envíanos un mensaje</h3>
                     <p style="margin-bottom: 25px;">Puedes escribirnos sin compromiso rellenando este formulario. Te responderemos lo antes posible.</p>
-                    
-                    <form id="contactForm">
+                    <form action="TU_ENLACE_DE_FORMSPREE_AQUI" method="POST">
                         <div class="form-group">
                             <label for="nombre">Nombre completo</label>
-                            <input type="text" id="nombre" class="form-control" required placeholder="Tu nombre">
+                            <input type="text" id="nombre" name="Nombre" class="form-control" required placeholder="Tu nombre">
                         </div>
                         <div class="form-group">
                             <label for="telefono">Teléfono (Opcional)</label>
-                            <input type="tel" id="telefono" class="form-control" placeholder="Tu número de teléfono">
+                            <input type="tel" id="telefono" name="Teléfono" class="form-control" placeholder="Tu número de teléfono">
                         </div>
                         <div class="form-group">
                             <label for="email">Correo electrónico</label>
-                            <input type="email" id="email" class="form-control" required placeholder="tu@email.com">
+                            <input type="email" id="email" name="Email" class="form-control" required placeholder="tu@email.com">
                         </div>
                         <div class="form-group">
                             <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" class="form-control" required placeholder="¿En qué podemos ayudarte?"></textarea>
+                            <textarea id="mensaje" name="Mensaje" class="form-control" required placeholder="¿En qué podemos ayudarte?"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensaje <i class="fa-regular fa-paper-plane"></i></button>
-                        
-                        <div class="form-success" id="formSuccess">
-                            <i class="fa-solid fa-circle-check"></i> Hemos recibido tu mensaje. Te responderemos lo antes posible.
-                        </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensaje <i class="fa-regular fa-paper-plane"></i></button>
                     </form>
                 </div>
 
@@ -1293,20 +1288,6 @@
             });
         });
 
-        // Contact Form Logic (Simulation for Email integration readiness)
-        const contactForm = document.getElementById('contactForm');
-        const formSuccess = document.getElementById('formSuccess');
-
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // Here you would typically handle the fetch/axios request to your backend
-            // Simulating success:
-            contactForm.reset();
-            formSuccess.style.display = 'block';
-            setTimeout(() => {
-                formSuccess.style.display = 'none';
-            }, 5000);
-        });
 
         // Slider Logic
         let slideIndex = 0;
