@@ -354,7 +354,7 @@
             align-items: center;
             gap: 60px;
             /* Esta es la animación: tarda 20 segundos en dar una vuelta completa a una velocidad constante */
-            animation: scrollBrands 20s linear infinite; 
+            animation: scrollBrands 5s linear infinite; 
         }
 
         
@@ -363,8 +363,8 @@
         }
 
         @keyframes scrollBrands {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* Se mueve justo la mitad (el Grupo 1) para que el Grupo 2 ocupe su lugar exacto */
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); } 
         }
 
         .brand-logo {
