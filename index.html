@@ -339,7 +339,33 @@
             margin-bottom: 15px;
             border: 1px solid #C8E6C9;
         }
+        /* Franja de Marcas */
+        .brands-section {
+            background-color: var(--white);
+            padding: 40px 0;
+            border-bottom: 1px solid #E2E8F0;
+        }
 
+        .brands-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .brand-logo {
+            height: 45px; /* Tamaño ideal para que no sean gigantes */
+            object-fit: contain;
+            filter: grayscale(100%) opacity(60%); /* El truco del gris transparente */
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .brand-logo:hover {
+            filter: grayscale(0%) opacity(100%); /* Vuelve el color al pasar el ratón */
+            transform: scale(1.05); /* Se hace un pelín más grande */
+        }
         /* Sobre Nosotros */
         .trust-grid {
             display: grid;
@@ -965,7 +991,15 @@
             </div>
         </div>
     </section>
-
+    <section class="brands-section">
+        <div class="container brands-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/La_Roche-Posay_logo.svg/512px-La_Roche-Posay_logo.svg.png" alt="La Roche-Posay" class="brand-logo">
+            
+            <img src="cantabria.png" alt="Cantabria Labs" class="brand-logo">
+            
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/CeraVe_logo.svg/512px-CeraVe_logo.svg.png" alt="CeraVe" class="brand-logo">
+        </div>
+    </section>
     <section class="section-padding" id="sobre-nosotros">
         <div class="container">
             <div class="text-center">
