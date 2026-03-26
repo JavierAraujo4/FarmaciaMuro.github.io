@@ -358,12 +358,15 @@
         }
 
         
-        .brands-track:hover {
-            animation-play-state: paused;
+        .brands-track {
+            display: inline-flex;
+            align-items: center;
+            /* ¡Ojo! Hemos quitado el "gap" de aquí */
+            animation: scrollBrands 20s linear infinite; 
         }
 
         @keyframes scrollBrands {
-            0% { transform: translateX(-50%); }
+            0% { transform: translateX(-33.33%); } /* Cambiamos a 33% porque ahora pondremos 3 grupos */
             100% { transform: translateX(0); } 
         }
 
@@ -373,7 +376,8 @@
             filter: grayscale(100%) opacity(60%);
             transition: var(--transition);
             cursor: pointer;
-            flex-shrink: 0; /* Evita que el navegador aplaste las fotos para intentar que quepan */
+            flex-shrink: 0;
+            margin: 0 40px; /* Aquí está la magia: el espacio ahora es perfecto y simétrico */
         }
 
         .brand-logo:hover {
