@@ -339,32 +339,46 @@
             margin-bottom: 15px;
             border: 1px solid #C8E6C9;
         }
-        /* Franja de Marcas */
+        
+        /* Franja de Marcas Animada */
         .brands-section {
             background-color: var(--white);
             padding: 40px 0;
             border-bottom: 1px solid #E2E8F0;
+            overflow: hidden; /* Esconde los logos que se salen de la pantalla */
+            white-space: nowrap; /* Evita que los logos salten a la línea de abajo */
         }
 
-        .brands-container {
-            display: flex;
-            justify-content: center;
+        .brands-track {
+            display: inline-flex;
             align-items: center;
             gap: 60px;
-            flex-wrap: wrap;
+            /* Esta es la animación: tarda 20 segundos en dar una vuelta completa a una velocidad constante */
+            animation: scrollBrands 20s linear infinite; 
+        }
+
+        
+        .brands-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollBrands {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Se mueve justo la mitad (el Grupo 1) para que el Grupo 2 ocupe su lugar exacto */
         }
 
         .brand-logo {
-            height: 45px; /* Tamaño ideal para que no sean gigantes */
+            height: 45px;
             object-fit: contain;
-            filter: grayscale(100%) opacity(60%); /* El truco del gris transparente */
+            filter: grayscale(100%) opacity(60%);
             transition: var(--transition);
             cursor: pointer;
+            flex-shrink: 0; /* Evita que el navegador aplaste las fotos para intentar que quepan */
         }
 
         .brand-logo:hover {
-            filter: grayscale(0%) opacity(100%); /* Vuelve el color al pasar el ratón */
-            transform: scale(1.05); /* Se hace un pelín más grande */
+            filter: grayscale(0%) opacity(100%);
+            transform: scale(1.05);
         }
         /* Sobre Nosotros */
         .trust-grid {
@@ -992,12 +1006,14 @@
         </div>
     </section>
     <section class="brands-section">
-        <div class="container brands-container">
-            <img src="\imagenes\La_Roche-Posay_id1nKOSLBo_1.png" alt="La Roche-Posay" class="brand-logo">
+        <div class="brands-track">
+            <img src="Imagenes/La_Roche-Posay_id1nKOSLBo_1.png" alt="La Roche-Posay" class="brand-logo">
+            <img src="Imagenes/id9d_1Gnd2_1774543851690.jpeg" alt="Cantabria Labs" class="brand-logo">
+            <img src="Imagenes/CeraVe_idRMvstMwe_1.png" alt="CeraVe" class="brand-logo">
             
-            <img src="\imagenes\id9d_1Gnd2_1774543851690.jpeg" alt="Cantabria Labs" class="brand-logo">
-            
-            <img src="\imagenes\CeraVe_idRMvstMwe_1.png" alt="CeraVe" class="brand-logo">
+            <img src="Imagenes/La_Roche-Posay_id1nKOSLBo_1.png" alt="La Roche-Posay" class="brand-logo">
+            <img src="Imagenes/id9d_1Gnd2_1774543851690.jpeg" alt="Cantabria Labs" class="brand-logo">
+            <img src="Imagenes/CeraVe_idRMvstMwe_1.png" alt="CeraVe" class="brand-logo">
         </div>
     </section>
     <section class="section-padding" id="sobre-nosotros">
