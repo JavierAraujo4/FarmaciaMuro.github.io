@@ -351,39 +351,44 @@
         }
         
         /* Franja de Marcas Animada */
+        
         .brands-section {
             background-color: var(--white);
             padding: 40px 0;
             border-bottom: 1px solid #E2E8F0;
-            overflow: hidden; /* Esconde los logos que se salen de la pantalla */
-            white-space: nowrap; /* Evita que los logos salten a la línea de abajo */
+            overflow: hidden;
+            position: relative;
         }
 
         .brands-track {
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            width: max-content;
             gap: 60px;
-            /* Esta es la animación: tarda 20 segundos en dar una vuelta completa a una velocidad constante */
-            animation: scrollBrands 5s linear infinite; 
+            animation: scrollBrands 25s linear infinite;
         }
 
-        
         .brands-track:hover {
             animation-play-state: paused;
         }
 
         @keyframes scrollBrands {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); } 
+            from {
+                transform: translateX(0);
+            }   
+            to {
+                transform: translateX(calc(-50% - 30px));
+            }
         }
 
         .brand-logo {
             height: 45px;
+            width: auto;
             object-fit: contain;
             filter: grayscale(100%) opacity(60%);
             transition: var(--transition);
             cursor: pointer;
-            flex-shrink: 0; /* Evita que el navegador aplaste las fotos para intentar que quepan */
+            flex-shrink: 0;
         }
 
         .brand-logo:hover {
