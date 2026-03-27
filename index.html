@@ -365,7 +365,7 @@
             align-items: center;
             width: max-content;
             gap: 60px;
-            animation: scrollBrands 25s linear infinite;
+            animation: scrollBrands 20s linear infinite;
         }
 
         .brands-track:hover {
@@ -1448,6 +1448,145 @@
         // Update every minute
         setInterval(checkOpeningStatus, 60000);
 
+    </script>
+    <div id="wrapper-alertas-guardia">
+    <div id="alerta-guardia-diurna" class="alerta-guardia">
+        🚧 🚨 ¡Hoy estamos de GUARDIA de DÍA! Abiertos hasta las <span id="horario-guardia-diurna-fin"></span>.
+    </div>
+    <div id="alerta-guardia-nocturna" class="alerta-guardia">
+        🌌 📢 ¡Hoy estamos de GUARDIA NOCTURNA! Abiertos TODA LA NOCHE hasta las <span id="horario-guardia-nocturna-fin"></span>.
+    </div>
+</div>
+
+<section id="proximas-guardias-section" class="section-padding" style="display: none; background-color: #f8fafc;">
+    <div class="container" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #0f172a; margin-bottom: 20px;">📅 Nuestras Próximas Guardias</h2>
+        <p style="color: #475569; margin-bottom: 30px;">Apunta estas fechas en tu calendario, estaremos abiertos 24h para cuidarte.</p>
+        <ul id="lista-proximas-guardias" style="list-style: none; padding: 0; font-size: 1.2rem; color: #10b981; font-weight: bold;">
+            </ul>
+    </div>
+</section>
+
+
+    <style>
+        #wrapper-alertas-guardia {
+            position: sticky;
+            top: 0;
+            z-index: 9999; /* Asegura que salga por encima de todo */
+            width: 100%;
+        }
+
+        .alerta-guardia {
+            display: none; /* Oculta por defecto */
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
+        /* Estilo Diurno: Naranja Ámbar */
+        #alerta-guardia-diurna {
+            background-color: #f59e0b; /* Ambar vibrante */
+        }
+
+        /* Estilo Nocturno: Morado Noche */
+        #alerta-guardia-nocturna {
+            background-color: #7c3aed; /* Violeta/Morado noche */
+        }
+    </style>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            // ==========================================================
+            // 🚨 SÚPER FÁCIL: AQUÍ INTRODUCES TUS GUARDIAS 🚨
+            // Formato exacto: "AAAA-MM-DD" | tipo: "diurna" O "nocturna"
+            // ==========================================================
+            const misGuardias = [
+                { fecha: "2026-03-27", tipo: "diurna" },   // Hoy (para probar)
+                { fecha: "2026-03-28", tipo: "nocturna" }, // Mañana (para probar)
+                { fecha: "2026-04-05", tipo: "diurna" },   // Ejemplo
+                { fecha: "2026-04-18", tipo: "nocturna" },  // Ejemplo
+                { fecha: "2026-05-02", tipo: "nocturna" }   // Ejemplo
+            ];
+            // ==========================================================
+            // YA ESTÁ. No toques nada más abajo si no sabes programar.
+            // ==========================================================
+
+
+            // Variables para el cerebro
+            const hoy = new Date();
+            const año = hoy.getFullYear();
+            const mes = String(hoy.getMonth() + 1).padStart(2, '0');
+            const diaNum = hoy.getDate();
+            const diaStr = String(diaNum).padStart(2, '0');
+            const diaSemana = hoy.getDay(); // 0 es Domingo, 1 es Lunes...
+
+            const fechaHoyFormatoJSON = `${año}-${mes}-${diaStr}`;
+            let guardiaHoyDetalles = null;
+
+            // --- Lógica 1: Comprobar si hoy hay guardia ---
+            guardiaHoyDetalles = misGuardias.find(g => g.fecha === fechaHoyFormatoJSON);
+
+            if (guardiaHoyDetalles) {
+                // ¡HOY ESTAMOS DE GUARDIA!
+                if (guardiaHoyDetalles.tipo === "diurna") {
+                    // Guardia Diurna: Mostrar alerta naranja
+                    document.getElementById('alerta-guardia-diurna').style.display = 'block';
+                    // Poner horario fin automático (image_9 context: 22:00 siempre)
+                    document.getElementById('horario-guardia-diurna-fin').innerText = "22:00";
+                } 
+                else if (guardiaHoyDetalles.tipo === "nocturna") {
+                    // Guardia Nocturna: Mostrar alerta morada
+                    document.getElementById('alerta-guardia-nocturna').style.display = 'block';
+                    // Poner horario fin automático (image_10 context):
+                    // Laborables (1-5): 9:30 | Sábados/Domingos (6, 0): 10:00
+                    const esFinDeSemana = (diaSemana === 0 || diaSemana === 6);
+                    const horarioFinNocturna = esFinDeSemana ? "10:00" : "9:30";
+                    document.getElementById('horario-guardia-nocturna-fin').innerText = horarioFinNocturna;
+                }
+            }
+
+            // --- Lógica 2: Rellenar la sección de Próximas Guardias (Opcional) ---
+            const lista = document.getElementById('lista-proximas-guardias');
+            const sectionProxGuardias = document.getElementById('proximas-guardias-section');
+
+            // Filtrar solo las fechas futuras
+            const futurasGuardias = misGuardias
+                .filter(g => g.fecha >= fechaHoyFormatoJSON) // Incluimos hoy
+                .sort((a, b) => new Date(a.fecha) - new Date(b.fecha)); // Ordenar por fecha
+
+            if (futurasGuardias.length > 0) {
+                // Mostrar la sección si hay guardias futuras
+                sectionProxGuardias.style.display = 'block';
+
+                futurasGuardias.forEach(g => {
+                    const fechaObj = new Date(g.fecha);
+                    const opcionesDate = { weekday: 'long', day: 'numeric', month: 'long' };
+                    let fechaPreciosa = fechaObj.toLocaleDateString('es-ES', opcionesDate);
+                    // Capitalizar primera letra (ej. "lunes" -> "Lunes")
+                    fechaPreciosa = fechaPreciosa.charAt(0).toUpperCase() + fechaPreciosa.slice(1);
+                    
+                    let tipoPrecioso = "";
+                    if (g.tipo === "diurna") tipoPrecioso = "☀️ DÍA (9:30-22h)";
+                    if (g.tipo === "nocturna") {
+                        tipoPrecioso = "🌙 NOCHE (22h-10h sáb/dom o 9:30h laborables)";
+                    }
+
+                    // Crear el elemento de lista li
+                    const li = document.createElement('li');
+                    li.style.marginBottom = "15px";
+                    li.style.borderBottom = "1px solid #e2e8f0";
+                    li.style.paddingBottom = "10px";
+                    li.innerHTML = `${fechaPreciosa} | <span style="font-weight:normal; color:#475569">${tipoPrecioso}</span>`;
+                    lista.appendChild(li);
+                });
+            }
+        });
     </script>
 </body>
 </html>
