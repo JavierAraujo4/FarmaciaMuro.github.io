@@ -951,13 +951,19 @@
             }
             
             .hero-info-card {
-                width: 90%; /* Hace que no pegue con los bordes del móvil */
+                width: 94%; /* Hace que no pegue con los bordes del móvil */
                 max-width: 400px; /* Evita que se estire demasiado */
                 margin: 0 auto; /* La magia para que quede EXACTAMENTE en el centro */
             }
             
             .info-list li div {
                 word-break: break-word; /* Permite que el email largo se adapte sin romper la caja */
+            }
+            /* Centrar y dar aire a los lados al texto principal en móvil */
+            .hero-content {
+                padding: 0 20px; /* Obliga a dejar 20 píxeles de aire a cada lado */
+                text-align: center; /* Centra el texto matemáticamente */
+                margin: 0 auto;
             }
         }
     </style>
