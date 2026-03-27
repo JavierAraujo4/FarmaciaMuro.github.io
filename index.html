@@ -956,7 +956,7 @@
                     <li><a href="#mapa">Dónde estamos</a></li>
                 </ul>
             </nav>
-        </div>          
+                 
             <div class="header-ctas" id="headerCtas">
                 <a href="tel:+34983308902" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Llamar</a>
                 <a href="https://wa.me/34684356590" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
@@ -967,6 +967,7 @@
             </button>
         </div>
     </header>
+
         <div id="wrapper-alertas-guardia">
             <div id="alerta-guardia-diurna" class="alerta-guardia">
                 🚧 🚨 ¡Hoy estamos de GUARDIA de DÍA! Abiertos hasta las <span id="horario-guardia-diurna-fin"></span>.
@@ -975,6 +976,7 @@
                 🌌 📢 ¡Hoy estamos de GUARDIA NOCTURNA! Abiertos TODA LA NOCHE hasta las <span id="horario-guardia-nocturna-fin"></span>.
             </div>
         </div> 
+
     <section class="hero" id="inicio">
         <div class="container hero-container">
             <div class="hero-content">
@@ -1564,9 +1566,9 @@
                     fechaPreciosa = fechaPreciosa.charAt(0).toUpperCase() + fechaPreciosa.slice(1);
                     
                     let tipoPrecioso = "";
-                    if (g.tipo === "diurna") tipoPrecioso = "☀️ DÍA (9:30-22h)";
+                    if (g.tipo === "diurna") tipoPrecioso = "DÍA (9:30-22h)";
                     if (g.tipo === "nocturna") {
-                        tipoPrecioso = "🌙 NOCHE (22h-10h sáb/dom o 9:30h laborables)";
+                        tipoPrecioso = "NOCHE (22h-10h sáb/dom o 9:30h laborables)";
                     }
 
                     // Crear el elemento de lista li
