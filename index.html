@@ -1467,10 +1467,8 @@
 
     <style>
         #wrapper-alertas-guardia {
-            position: sticky;
-            top: 0;
-            z-index: 9999; /* Asegura que salga por encima de todo */
             width: 100%;
+            display: block;
         }
 
         .alerta-guardia {
@@ -1506,9 +1504,6 @@
             const misGuardias = [
                 { fecha: "2026-03-27", tipo: "diurna" },   // Hoy (para probar)
                 { fecha: "2026-03-28", tipo: "nocturna" }, // Mañana (para probar)
-                { fecha: "2026-04-05", tipo: "diurna" },   // Ejemplo
-                { fecha: "2026-04-18", tipo: "nocturna" },  // Ejemplo
-                { fecha: "2026-05-02", tipo: "nocturna" }   // Ejemplo
             ];
             // ==========================================================
             // YA ESTÁ. No toques nada más abajo si no sabes programar.
