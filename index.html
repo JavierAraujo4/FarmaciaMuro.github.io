@@ -490,6 +490,21 @@
             text-decoration: underline;
         }
 
+        /* Ocultar servicios extras y botón Ver Más */
+        .servicio-extra {
+            display: none; 
+        }
+        
+        .servicio-extra.mostrar {
+            display: flex; /* Se usa flex porque tus tarjetas ya lo usan por dentro */
+        }
+        
+        .btn-ver-mas-container {
+            text-align: center;
+            margin-top: 40px;
+            width: 100%;
+        }
+
         /* Galería Slider */
         .gallery-section {
             background-color: var(--bg-light);
@@ -1102,37 +1117,48 @@
                     <h3>Asesoramiento personalizado</h3>
                     <p>Resolvemos tus dudas sobre interacciones, posología y el uso correcto de tus medicamentos diarios.</p>
                     <a href="#contacto" class="service-link">Escribir por correo <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-leaf"></i></div>
-                    <h3>Productos naturales</h3>
-                    <p>Consejo experto en fitoterapia y complementos alimenticios naturales para mejorar tu bienestar de forma preventiva.</p>
-                    <a href="https://wa.me/34684356590" target="_blank" class="service-link">Consultar por WhatsApp <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-paw"></i></div>
-                    <h3>Veterinaria</h3>
-                    <p>Disponemos de medicamentos y productos de cuidado para mantener la salud y el bienestar de tus mascotas.</p>
-                    <a href="tel:+34983308902" class="service-link">Preguntar disponibilidad <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-crutch"></i></div>
-                    <h3>Ortopedia básica</h3>
-                    <p>Asesoramiento en productos de apoyo, inmovilización y ayudas técnicas para mejorar la movilidad y calidad de vida.</p>
-                    <a href="#contacto" class="service-link">Consultarnos <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                </div>                
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-pills"></i></div>
                     <h3>Sistema Personalizado de Dosificación (SPD)</h3>
                     <p>Preparamos tu medicación semanal en blísters organizados por días y tomas. Ideal para evitar olvidos y ofrecer mayor tranquilidad a pacientes polimedicados.</p>
                     <a href="https://wa.me/34684356590" target="_blank" class="service-link">Consultar por WhatsApp <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
+                </div> 
+                <div class="service-card servicio-extra">
                     <div class="service-icon"><i class="fa-solid fa-flask"></i></div>
                     <h3>Formulación Magistral</h3>
                     <p>Elaboramos medicamentos a medida bajo prescripción médica. Adaptamos dosis, formas y excipientes a las necesidades específicas de cada paciente.</p>
                     <a href="tel:+34983308902" class="service-link">Llamar para consultar <i class="fa-solid fa-arrow-right"></i></a>
+                </div>                               
+                <div class="service-card servicio-extra">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Control de tensión</h3>
+                    <p>Medición precisa de la presión arterial y seguimiento personalizado para prevenir y controlar riesgos cardiovasculares.</p>
+                    <a href="tel:+34983308902" class="service-link">Llamar para más información <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
+                <div class="service-card servicio-extra">
+                    <div class="service-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Productos naturales</h3>
+                    <p>Consejo experto en fitoterapia y complementos alimenticios naturales para mejorar tu bienestar de forma preventiva.</p>
+                    <a href="https://wa.me/34684356590" target="_blank" class="service-link">Consultar por WhatsApp <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card servicio-extra">
+                    <div class="service-icon"><i class="fa-solid fa-paw"></i></div>
+                    <h3>Veterinaria</h3>
+                    <p>Disponemos de medicamentos y productos de cuidado para mantener la salud y el bienestar de tus mascotas.</p>
+                    <a href="tel:+34983308902" class="service-link">Preguntar disponibilidad <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card servicio-extra">
+                    <div class="service-icon"><i class="fa-solid fa-crutch"></i></div>
+                    <h3>Ortopedia básica</h3>
+                    <p>Asesoramiento en productos de apoyo, inmovilización y ayudas técnicas para mejorar la movilidad y calidad de vida.</p>
+                    <a href="#contacto" class="service-link">Consultarnos <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="btn-ver-mas-container">
+                <button id="btnToggleServicios" class="btn btn-outline" onclick="toggleServicios()">
+                    Ver todos los servicios <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </div>
             </div>
         </div>
     </section>
@@ -1593,6 +1619,30 @@
                 });
             }
         });
+        // Lógica para el botón de Ver Más Servicios
+        function toggleServicios() {
+            const serviciosExtras = document.querySelectorAll('.servicio-extra');
+            const btn = document.getElementById('btnToggleServicios');
+            let estanMostrados = false;
+
+            // Cambiar la visibilidad de cada tarjeta extra
+            serviciosExtras.forEach(tarjeta => {
+                tarjeta.classList.toggle('mostrar');
+                // Comprobamos si ahora se están mostrando
+                if(tarjeta.classList.contains('mostrar')) {
+                    estanMostrados = true;
+                }
+            });
+
+            // Cambiar el texto y la flechita del botón
+            if (estanMostrados) {
+                btn.innerHTML = 'Ver menos servicios <i class="fa-solid fa-chevron-up"></i>';
+            } else {
+                btn.innerHTML = 'Ver todos los servicios <i class="fa-solid fa-chevron-down"></i>';
+                // Opcional: hacer un pequeño scroll hacia arriba para que no se pierdan
+                document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
     </script>
 </body>
 </html>
