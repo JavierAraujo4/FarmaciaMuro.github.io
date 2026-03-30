@@ -528,7 +528,7 @@
         .slide {
             min-width: 100%;
             height: 500px;
-            background-color: #E2E8F0;
+            background-color: #FFFFFF;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -536,10 +536,15 @@
         }
 
         .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+
+            max-width: 100%; /* La imagen no puede ser más ancha que su contenedor */
+            max-height: 100%; /* La imagen no puede ser más alta que su contenedor */
+            width: auto; /* Mantiene la proporción */
+            height: auto; /* Mantiene la proporción */
+            object-fit: contain; /* ¡ESTA ES LA MAGIA! La imagen aparecerá ENTERA */
+            display: block; /* Para que se comporte bien */
         }
+        
 
         /* Placeholder styles for initial load before real photos are added */
         .slide-placeholder {
@@ -1181,24 +1186,24 @@
                 <button class="slider-btn prev" aria-label="Foto anterior" onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
                 <div class="slider-wrapper" id="sliderWrapper">
                     <div class="slide">
+                        <img src="Imagenes/WhatsApp Image 2026-03-30 at 14.19.28 (1).jpeg" alt="Interior ">
+                    </div>
+                    
+                    <div class="slide">
                         <img src="Imagenes/WhatsApp Image 2026-03-30 at 14.19.28 (2).jpeg" alt="Interior ">
                     </div>
                     
                     <div class="slide">
-                        <img src="Imagenes/WhatsApp Image 2026-03-30 at 14.19.28 (3).jpeg" alt="Interior ">
-                    </div>
-                    
-                    <div class="slide">
-                        <img src="Imagenes/WhatsApp Image 2026-03-30 at 14.19.28 (5).jpeg" alt="Interior ">
+                        <img src="Imagenes/WhatsApp Image 2026-03-30 at 14.19.28 (4).jpeg" alt="Interior ">
                     </div>
                     <div class="slide">
-                        <img src="Imagenes/WhatsApp Image 2026-03-30 at 14.19.28 (7).jpeg" alt="Exterior placa">
+                        <img src="Imagenes/WhatsApp Image 2026-03-30 at 14.19.28 (6).jpeg" alt="Exterior placa">
                     </div>
                     <div class="slide">
-                        <img src="Imagenes/WhatsApp Image 2026-03-30 at 14.19.28 (8).jpeg" alt="Interior ">
+                        <img src="Imagenes/WhatsApp Image 2026-03-30 at 14.19.28 (7).jpeg" alt="Interior ">
                     </div> 
                     <div class="slide">
-                        <img src="Imagenes/WhatsApp Image 2026-03-30 at 14.19.28 (9).jpeg" alt="Interior ">
+                        <img src="Imagenes/WhatsApp Image 2026-03-30 at 14.19.28 (8).jpeg" alt="Interior ">
                     </div>                                                           
                 </div>
                 <button class="slider-btn next" aria-label="Siguiente foto" onclick="moveSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
@@ -1207,6 +1212,9 @@
                 <div class="dot active" onclick="currentSlide(0)"></div>
                 <div class="dot" onclick="currentSlide(1)"></div>
                 <div class="dot" onclick="currentSlide(2)"></div>
+                <div class="dot" onclick="currentSlide(3)"></div>
+                <div class="dot" onclick="currentSlide(4)"></div>
+                <div class="dot" onclick="currentSlide(5)"></div>
             </div>
         </div>
     </section>
