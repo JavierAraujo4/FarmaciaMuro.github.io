@@ -935,7 +935,20 @@
             .nav-links, .header-ctas {
                 display: none;
             }
-
+            /* Apagar el fondo borroso en móviles para evitar que se cuelgue la web */
+            .slide::before {
+                display: none !important;
+            }
+            
+            /* Poner un fondo neutro elegante en su lugar */
+            .slide {
+                background-color: #f1f5f9; /* Un gris muy clarito y limpio */
+            }
+            
+            /* Ajustar la altura del carrusel para móvil para que quede más proporcionado */
+            .slide {
+                height: 400px; /* Un poco más bajito en móvil */
+            }
             .mobile-menu-btn {
                 display: block;
             }
