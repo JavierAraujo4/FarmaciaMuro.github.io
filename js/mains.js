@@ -4,10 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.getElementById('navLinks');
     const headerCtas = document.getElementById('headerCtas');
 
-    if (mobileMenuBtn) {
+    if (mobileMenuBtn && navLinks && headerCtas) {
+        // Abrir y cerrar al tocar las 3 rayitas
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('nav-active');
             headerCtas.classList.toggle('nav-active');
+        });
+
+        // Cerrar al tocar un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-active');
+                headerCtas.classList.remove('nav-active');
+            });
         });
     }
 
@@ -19,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 3. Estado Abierto/Cerrado (Módulo seguro, no falla si no existe la tarjeta)
+    // 3. Estado Abierto/Cerrado
     const statusBadge = document.getElementById('openStatus');
     if (statusBadge) {
         function checkOpeningStatus() {
@@ -50,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setInterval(checkOpeningStatus, 60000);
     }
 
-    // 4. Guardias (Solo procesa si el DOM de guardias existe en la página actual)
+    // 4. Guardias
     const wrapperAlertas = document.getElementById('wrapper-alertas-guardia');
     if (wrapperAlertas) {
         const misGuardias = [
