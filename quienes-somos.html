@@ -25,7 +25,7 @@
             <nav>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="quienes-somos.html">Sobre nosotros</a></li>
+                    <li><a href="quienes-somos.html">Quiénes somos</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
                     <li><a href="galeria.html">Galería</a></li>
                     <li><a href="index.html#contacto">Contacto</a></li>
@@ -104,5 +104,29 @@
     <a href="https://wa.me/34684356590" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Contactar por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const btnMenu = document.getElementById('mobileMenuBtn');
+            const nav = document.getElementById('navLinks');
+            const ctas = document.getElementById('headerCtas');
+
+            if (btnMenu && nav && ctas) {
+                btnMenu.addEventListener('click', function(e) {
+                    e.preventDefault(); // Evita que la pantalla salte
+                    nav.classList.toggle('nav-active');
+                    ctas.classList.toggle('nav-active');
+                });
+
+                // Cerrar el menú si tocan un enlace
+                const enlaces = nav.querySelectorAll('a');
+                enlaces.forEach(function(enlace) {
+                    enlace.addEventListener('click', function() {
+                        nav.classList.remove('nav-active');
+                        ctas.classList.remove('nav-active');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
