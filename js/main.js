@@ -27,37 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             link.classList.add('active');
         }
     });
-
-    // 3. Estado Abierto/Cerrado
-    const statusBadge = document.getElementById('openStatus');
-    if (statusBadge) {
-        function checkOpeningStatus() {
-            const now = new Date();
-            const day = now.getDay();
-            const timeFloat = now.getHours() + now.getMinutes() / 60;
-            let isOpen = false;
-
-            if (day >= 1 && day <= 5) {
-                if (timeFloat >= 9.5 && timeFloat < 22) isOpen = true;
-            } else if (day === 6) {
-                if (timeFloat >= 10 && timeFloat < 22) isOpen = true;
-            }
-
-            if (isOpen) {
-                statusBadge.innerHTML = '<i class="fa-solid fa-door-open"></i> Abierto ahora';
-                statusBadge.style.backgroundColor = '#E8F5E9';
-                statusBadge.style.color = '#2E7D32';
-                statusBadge.style.borderColor = '#C8E6C9';
-            } else {
-                statusBadge.innerHTML = '<i class="fa-solid fa-door-closed"></i> Cerrado ahora';
-                statusBadge.style.backgroundColor = '#FFEBEE';
-                statusBadge.style.color = '#C62828';
-                statusBadge.style.borderColor = '#FFCDD2';
-            }
-        }
-        checkOpeningStatus();
-        setInterval(checkOpeningStatus, 60000);
-    }
+s
 
     // 4. Guardias
     const wrapperAlertas = document.getElementById('wrapper-alertas-guardia');
