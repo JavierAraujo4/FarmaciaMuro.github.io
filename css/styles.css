@@ -23,6 +23,7 @@ body {
     background-color: var(--bg-light);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 { font-family: 'Nunito', sans-serif; color: var(--text-dark); font-weight: 700; }
@@ -93,7 +94,14 @@ header { background-color: var(--white); box-shadow: var(--shadow-sm); position:
 .hero-content h1 span { color: var(--primary-green); }
 .hero-content p { font-size: 1.15rem; margin-bottom: 30px; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; }
-.trust-strip { display: flex; gap: 20px; font-size: 0.9rem; font-weight: 600; color: var(--text-dark); }
+.trust-strip {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    flex-wrap: wrap;
+}
 .trust-strip div { display: flex; align-items: center; gap: 8px; }
 .trust-strip i { color: var(--secondary-green); }
 .hero-info-card { background-color: var(--white); padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border-top: 5px solid var(--primary-green); }
@@ -187,29 +195,25 @@ footer { background-color: var(--text-dark); color: var(--white); padding: 40px 
 
 
 @media (max-width: 768px) {
-    /* Permitimos que la cabecera se estire hacia abajo */
     .header-container {
         flex-wrap: wrap; 
     }
     
-    /* Escondemos los enlaces y botones por defecto y los mandamos abajo (order: 3) */
     .nav-links, .header-ctas { 
         display: none; 
         width: 100%; 
         order: 3; 
     }
     
-    /* Mostramos siempre el botón de las 3 rayitas */
     .mobile-menu-btn { 
         display: block !important; 
     }
     
-    /* LA MAGIA: Cuando el menú se abre, se colocan en fila estirando el fondo blanco */
     .nav-links.nav-active, 
     .header-ctas.nav-active { 
         display: flex !important; 
         flex-direction: column; 
-        position: static !important; /* Quitamos la posición flotante antigua */
+        position: static !important;
         background: var(--white); 
         text-align: center; 
         gap: 15px; 
@@ -217,18 +221,69 @@ footer { background-color: var(--text-dark); color: var(--white); padding: 40px 
         padding: 10px 0;
     }
     
-    /* Le damos un poco de aire (margen) por debajo a los últimos botones */
     .header-ctas.nav-active {
         padding-bottom: 25px;
     }
 
-    /* Ajustes de tamaño para la portada en móviles */
-    .hero-content h1 { font-size: 2.2rem; }
-    .section-title { font-size: 1.8rem; }
-    .hero-subpagina { height: 250px; }
-    .hero-subpagina h1 { font-size: 2.2rem; }
-    .hero-info-card { width: 93%; max-width: 400px; margin: 0 auto; }
-    .info-list li div { word-break: break-word; }
+    .hero {
+        padding: 40px 0 60px;
+    }
+
+    .hero-container {
+        gap: 30px;
+    }
+
+    .hero-content h1 { 
+        font-size: 2.2rem; 
+    }
+
+    .hero-content p {
+        font-size: 1.05rem;
+    }
+
+    .section-title { 
+        font-size: 1.8rem; 
+    }
+
+    .hero-subpagina { 
+        height: 250px; 
+    }
+
+    .hero-subpagina h1 { 
+        font-size: 2.2rem; 
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .trust-strip {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .trust-strip div {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-info-card { 
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 28px 22px;
+    }
+
+    .info-list li div { 
+        word-break: break-word; 
+    }
 }
 
 /* Ajuste para que los enlaces con ID no queden debajo de la cabecera */
