@@ -200,28 +200,120 @@ header {
 }
 
 /* Guardias */
-#wrapper-alertas-guardia {
+
+.guardia-wrapper {
     width: 100%;
-    display: block;
+    padding: 14px 20px 0;
+    background: transparent;
 }
 
 .alerta-guardia {
     display: none;
-    text-align: center;
-    padding: 15px 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 100%;
 }
 
-#alerta-guardia-diurna {
-    background-color: #f59e0b;
+.alerta-guardia-premium {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 22px 24px;
+    display: none;
+    grid-template-columns: auto 1fr auto;
+    gap: 18px;
+    align-items: center;
+    border: 1px solid rgba(8, 97, 70, 0.10);
+    box-shadow: 0 14px 34px rgba(8, 97, 70, 0.10);
 }
 
-#alerta-guardia-nocturna {
-    background-color: #7c3aed;
+.alerta-guardia-premium.alerta-diurna {
+    background: linear-gradient(135deg, #fff8eb 0%, #fff3d9 100%);
+    border-left: 6px solid #f59e0b;
+}
+
+.alerta-guardia-premium.alerta-nocturna {
+    background: linear-gradient(135deg, #f4efff 0%, #ebe3ff 100%);
+    border-left: 6px solid #7c3aed;
+}
+
+.alerta-guardia-icono {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.alerta-diurna .alerta-guardia-icono {
+    background: rgba(245, 158, 11, 0.14);
+    color: #b45309;
+}
+
+.alerta-nocturna .alerta-guardia-icono {
+    background: rgba(124, 58, 237, 0.14);
+    color: #6d28d9;
+}
+
+.alerta-guardia-contenido h3 {
+    margin: 4px 0 6px;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    color: var(--text-dark);
+}
+
+.alerta-guardia-contenido p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.55;
+}
+
+.alerta-guardia-etiqueta {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.alerta-diurna .alerta-guardia-etiqueta {
+    background: rgba(245, 158, 11, 0.12);
+    color: #b45309;
+}
+
+.alerta-nocturna .alerta-guardia-etiqueta {
+    background: rgba(124, 58, 237, 0.12);
+    color: #6d28d9;
+}
+
+.alerta-guardia-cta .btn {
+    white-space: nowrap;
+}
+
+.alerta-diurna .btn-outline {
+    border-color: rgba(180, 83, 9, 0.25);
+    color: #92400e;
+}
+
+.alerta-diurna .btn-outline:hover {
+    background: #b45309;
+    border-color: #b45309;
+    color: #fff;
+}
+
+.alerta-nocturna .btn-outline {
+    border-color: rgba(109, 40, 217, 0.22);
+    color: #6d28d9;
+}
+
+.alerta-nocturna .btn-outline:hover {
+    background: #6d28d9;
+    border-color: #6d28d9;
+    color: #fff;
 }
 
 /* Hero home */

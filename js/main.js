@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             link.classList.add('active');
         }
     });
-s
+
 
     // 4. Guardias
     const wrapperAlertas = document.getElementById('wrapper-alertas-guardia');
@@ -35,8 +35,8 @@ s
         const misGuardias = [
             { fecha: "2026-05-15", tipo: "nocturna" },
             { fecha: "2026-04-11", tipo: "diurna" },
-            { fecha: "2026-05-8", tipo: "diurna" },
-            { fecha: "2026-06-4", tipo: "diurna" }
+            { fecha: "2026-05-08", tipo: "diurna" },
+            { fecha: "2026-06-04", tipo: "diurna" }
         ];
 
         const hoy = new Date();
