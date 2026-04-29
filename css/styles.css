@@ -1233,4 +1233,66 @@ footer {
     .actualidad-card p {
         font-size: 0.98rem;
     }
+    .legal-section {
+    background: var(--bg-light);
+    }
+
+    .legal-container {
+        max-width: 900px;
+        background: var(--white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        border: var(--border-soft);
+        padding: 42px;
+    }
+
+    .legal-container h2 {
+        margin-top: 34px;
+        margin-bottom: 14px;
+        color: var(--primary-green);
+        font-size: 1.45rem;
+    }
+
+    .legal-container h3 {
+        margin-top: 24px;
+        margin-bottom: 10px;
+        color: var(--text-dark);
+    }
+
+    .legal-container p,
+    .legal-container li {
+        margin-bottom: 14px;
+        color: var(--text-gray);
+    }
+
+    .legal-container ul {
+        padding-left: 22px;
+        margin-bottom: 18px;
+    }
+
+    .legal-container a {
+        color: var(--primary-green);
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    .legal-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 0.92rem;
+    }
+
+    .legal-table th,
+    .legal-table td {
+        border: 1px solid #DDE8E4;
+        padding: 12px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .legal-table th {
+        background: #EEF7F3;
+        color: var(--primary-green);
+    }
 }

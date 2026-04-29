@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-      <!-- <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/e3174e27731a883ce8fbb9f7ccc8ce35/script.js"></script> -->
+    <link rel="stylesheet" href="https://pdcc.gdpr.es/pdcc.min.css">
+        <script charset="utf-8" src="https://pdcc.gdpr.es/pdcc.min.js"></script>
+
+    <script>
+    PDCookieConsent.config({
+    "brand": {
+        "name": "Farmacia Muro",
+        "url": "https://www.farmaciamuro.com"
+    },
+    "showRejectButton": true,
+    "cookiePolicyLink": "https://www.farmaciamuro.com/cookies.html"
+    });
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiénes Somos | Farmacia Muro</title>
@@ -136,9 +148,10 @@
             <div class="footer-logo"><h3>FARMACIA MURO</h3></div>
             <p class="footer-text">Lda. Marta Araujo Valle<br>Calle Muro, 8, bajo dcha, 47004 Valladolid</p>
             <div class="footer-links">
-                <a href="#">Aviso Legal</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Política de Cookies</a>
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="privacidad.html">Política de Privacidad</a>
+                <a href="cookies.html">Política de Cookies</a>
+                <a href="#" class="pdcc-open-modal">Configurar cookies</a>
             </div>
             <p class="footer-text" style="font-size: 0.8rem; margin-bottom: 0;">© 2026 Farmacia Muro. Todos los derechos reservados.</p>
         </div>
