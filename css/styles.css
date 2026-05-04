@@ -201,10 +201,21 @@ header {
 
 /* Guardias */
 
+/* Guardias - popup serio y sencillo */
+
 .guardia-wrapper {
-    width: 100%;
-    padding: 14px 20px 0;
-    background: transparent;
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    padding: 20px;
+    background: rgba(20, 28, 25, 0.46);
+    align-items: center;
+    justify-content: center;
+}
+
+.guardia-wrapper.guardia-popup-activo {
+    display: flex;
 }
 
 .alerta-guardia {
@@ -212,16 +223,128 @@ header {
 }
 
 .alerta-guardia-premium {
-    max-width: 1200px;
+    position: relative;
+    width: 100%;
+    max-width: 520px;
     margin: 0 auto;
-    border-radius: 20px;
-    padding: 22px 24px;
     display: none;
-    grid-template-columns: auto 1fr auto;
-    gap: 18px;
+    padding: 34px 34px 30px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #DDE8E4;
+    box-shadow: 0 18px 50px rgba(20, 28, 25, 0.22);
+    animation: guardiaPopupEntrada 0.22s ease;
+}
+
+.alerta-guardia-premium.guardia-alerta-activa {
+    display: block;
+}
+
+.alerta-guardia-premium.alerta-diurna,
+.alerta-guardia-premium.alerta-nocturna {
+    background: #ffffff;
+    border-left: 5px solid var(--primary-green);
+}
+
+.alerta-guardia-contenido {
+    padding: 0;
+    text-align: left;
+}
+
+.alerta-guardia-etiqueta {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent !important;
+    color: var(--primary-green) !important;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.alerta-guardia-contenido h3 {
+    margin: 0 42px 12px 0;
+    font-size: 1.55rem;
+    line-height: 1.2;
+    color: var(--text-dark);
+    letter-spacing: -0.2px;
+}
+
+.alerta-guardia-contenido p {
+    margin: 0;
+    max-width: 430px;
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.alerta-guardia-contenido strong {
+    color: var(--text-dark);
+}
+
+.alerta-guardia-cta {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.alerta-guardia-cta .btn {
+    border-radius: 8px;
+    padding: 11px 18px;
+    font-size: 0.94rem;
+    box-shadow: none;
+}
+
+.alerta-diurna .btn-outline,
+.alerta-nocturna .btn-outline {
+    background: #ffffff;
+    border-color: rgba(8, 97, 70, 0.28);
+    color: var(--primary-green);
+}
+
+.alerta-diurna .btn-outline:hover,
+.alerta-nocturna .btn-outline:hover {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+    color: #ffffff;
+}
+
+.cerrar-alerta-guardia {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #DDE8E4;
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--text-gray);
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: flex;
     align-items: center;
-    border: 1px solid rgba(8, 97, 70, 0.10);
-    box-shadow: 0 14px 34px rgba(8, 97, 70, 0.10);
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.cerrar-alerta-guardia:hover {
+    background: #F6FAF8;
+    color: var(--text-dark);
+    border-color: rgba(8, 97, 70, 0.22);
+}
+
+@keyframes guardiaPopupEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .alerta-guardia-premium.alerta-diurna {
@@ -1093,6 +1216,53 @@ footer {
 }
 
 @media (max-width: 768px) {
+/* Popup guardia en móvil */
+    .guardia-wrapper {
+        padding: 16px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .alerta-guardia-premium {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 24px 26px;
+        border-radius: 10px;
+    }
+
+    .alerta-guardia-contenido h3 {
+        margin-right: 38px;
+        font-size: 1.35rem;
+        line-height: 1.25;
+    }
+
+    .alerta-guardia-contenido p {
+        font-size: 0.96rem;
+        line-height: 1.55;
+    }
+
+    .alerta-guardia-etiqueta {
+        font-size: 0.72rem;
+        margin-bottom: 12px;
+    }
+
+    .alerta-guardia-cta {
+        margin-top: 22px;
+    }
+
+    .alerta-guardia-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cerrar-alerta-guardia {
+        top: 16px;
+        right: 16px;
+        width: 32px;
+        height: 32px;
+        border-radius: 7px;
+        font-size: 0.9rem;
+    }
     .section-padding {
         padding: 72px 0;
     }
