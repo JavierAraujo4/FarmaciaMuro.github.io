@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (wrapperAlertas) {
         const misGuardias = [
-            { fecha: "2026-05-15", tipo: "nocturna" },
-            { fecha: "2026-04-11", tipo: "diurna" },
-            { fecha: "2026-05-08", tipo: "diurna" },
-            { fecha: "2026-06-04", tipo: "diurna" }
+            { fecha: "2026-07-08", tipo: "nocturna" },
+            { fecha: "2026-08-31", tipo: "nocturna" },
+            { fecha: "2026-10-24", tipo: "nocturna" },
+            { fecha: "2026-09-20", tipo: "diurna" }
         ];
 
         const hoy = new Date();
